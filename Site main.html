@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<meta charset="utf-8"> <!--Indica que a linguagem é PT - BR-->
+<html>
+    <head>
+        <title> Site em desenvolvimento </title>
+    </head>
+    <body style="background-color: rgb(158, 167, 255);">
+        <div id="elementosiniciais">
+            <style>
+                h1, h2 {color:blueviolet}
+            </style>
+            <!--h1 é um exemplo de Elemento de bloco, por ocuparem um espaço somente pra si, e pularem linha -->
+
+        <h1 style="color:rgb(25, 0, 250)" > Site que aglomera conhecimentos da aula</h1>
+        <!--Style = "Color..." Representa a cor do que será inscrito em seguida-->
+        <h2> Subtítulo </h2>
+            <p>Hoje estamos vendo os elementos iniciais de HTML</p>
+        </div>
+        <div id="Img&Links">
+        <h2>Aprendendo a colocar imagens </h2>
+            <h3 style="color:crimson;">God's eye </h3>
+            <img src="Imagem/god's eye.jpg" alt="God's Eye (Olho de Deus)"> <!-- img, é um exemplo de elemento inline, que conta apenas como uma linha normal, que se se junta com outros elementos inline.-->
+                <!--src="Diretório da imagem" é usado para exibir imagens-->
+                <!--O alt representa um texto que será exibido caso o navegador não suportar 
+                a imagem-->
+        <h2>Como colocar links</h2>
+            <a href="http://scl.ifsp.edu.br/" target="_blank">Link para a página do IFSP - São carlos</a>
+            <br>
+            <a href = "Site02/Site secundário.html" target="_blank"> interno para a página 02 </a>
+        </div>
+        <div id="listas">
+            <h2>Colocando listas</h2>
+
+            <ul style="list-style-type:square;color: chartreuse;">
+                <li>São Paulo</li>
+                <li>Rio de Janeiro</li>
+                <li>Minas gerais<br>
+                    <ul>
+                        <li>Poços de caldas</li>
+                        <li>Belo Horizonte</li>
+                    </ul>
+                </li>
+            </ul>
+            <!--UL - Unordered List (Lista Não ordenada)-->
+            <ol style="list-style-type:upper-roman">
+                <li><a href="Imagem/ovos.jpg" target="_blank"> Colocar os ovos</a></li>
+                <li>Misturar c/ a farinha</li>
+                <li>Colocar na forma</li>
+                
+            </ol>
+            <!--OL - Ordened List (Lista ordenada)-->
+        </div>
+        <div id="tabelas">
+        <h2>Colocando Tabelas</h2>
+            <table>
+                <!--Na tag seguinte estamos colocando o estilo de todas as tabelas-->
+                <style> 
+                    table,th,td {
+                            border: 1px solid black;
+                            border-collapse:collapse }
+
+                </style>
+                <tr>     <!--TR - Table Row(Linha da Tabela)-->
+                    <th>Nome</th> <!--TH - Table Head(Cabeçalho da Tabela)-->
+                    <th>Idade</th>
+                    <th>Cidade</th>
+
+                </tr>
+                <tr>
+                    <td>João</td> <!--TD - Table Data(Dados da Tabela)-->
+                    <td>10</td>
+                    <td>São Carlos</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>12</td>
+                    <td>São Carlos</td>
+                </tr>
+
+            </table>
+            <h2>Outras tabelas</h2> 
+
+            <table>
+                <thead>
+                    <tr><th colspan="2"> Programação </th></tr>
+                    <th> Data </th>
+                    <th> Aula </th>
+                    <!-- o Colspan junta da referente célula, para a da direita-->
+                </thead>
+                <tbody>
+                <tr>
+                    <td rowspan="2"> 19/04 </td>
+                    <td> INW </td>
+                </tr>
+                    <td> ARQ </td>
+                <tr>
+                    <td rowspan="2"> 20/04 </td>
+                    <td> AP1 </td>
+                </tr>
+                <tr>
+                    <td> AP1 </td>
+                <!-- rowspan junta de cima para baixo, se tiver algo na parte de baixo ele empurra pro lado-->
+                </tbody>
+
+
+            </table>
+        </div>
+        <div id="formularios">
+            <form action="cliente.php" target="_blank" method="get"> <!--form representa a tag de formulário-->
+                <h2> Exemplos de formulários - Cadastro de usuário </h2>
+                <label for="inptNome">Nome</label> <!--Na primeira linha você escreve o que vai aparecer na frente do input, e como você vai se relacionar a ele-->
+                <input type="text" id="inptNome" name="nome"><br> <!--Na segunda linha você determina o tipo de informação que está sendo preenchida-->
+                <label for="intpSobrenome">Sobrenome</label> <!--Segue o mesmo padrão para adicionar mais informações no formulário-->
+                <input type="text" id="intpSobrenome" name="sobrenome"><br>
+                <label for="inptData">Data de nascimento</label>
+                <input type="date" id="intpData" name="dtnascimento"> <br>
+                <label for="inptEndereço">Endereço</label>
+                <input type="text" id="intpEndereço" name="endereço">
+                <input type="submit" value="Cadastrar"> <!--Nessa linha escrevemos sobre o botão que vai enviar os dados do relatório, e o que vai estar escrito nele-->
+            </form>
+        </div>
+    </body>
+
+</html>
+
+<!--Site para aprender mais sobre html https://developer.mozilla.org/pt-BR/ -->
